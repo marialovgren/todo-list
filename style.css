@@ -35,7 +35,7 @@ hr {
 
 .todolist .completed  {
 	font-style: italic;
-	color: #82C7C4;
+    text-decoration: line-through;
 }
 
 .todolist li {
