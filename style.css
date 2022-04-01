@@ -2,8 +2,14 @@
  * Generic styles
  */
 
+ body {
+    background-color: #C7EAE4;
+    margin: 0;
+ }
+
 h1, h2, h3, h4, h5, h6 {
 	margin-bottom: 0.75em;
+    color: #584c47;
 }
 
 hr {
@@ -16,6 +22,7 @@ hr {
 .todoWrapper {
     border-radius: 2em;
     padding: 50px;
+    background-color: white;
 }
 
 #app {
@@ -28,19 +35,35 @@ hr {
 
 .todolist .completed  {
 	font-style: italic;
-	color: green;
+	color: #82C7C4;
 }
 
 .todolist li {
-    color: red;
+    color: black;
+    background-color: #FF9E97;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 5px;
+    margin-top: 10px;
+    border-radius: 10px;
+    
+}
+
+.todolist li:hover {
+    font-weight: bold;
 }
 
 li {
     list-style: none;
 }
 
-.buttons {
+.btn {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+    background-color: #82C7C4;
+}
+
+button:hover {
+    background-color: #20948c;
 }

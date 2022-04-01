@@ -16,26 +16,22 @@
 
 <body>
 	<div id="app" class="container">
-        <div class="todoWrapper bg-dark text-light col-6 d-flex flex-column align-items-center">
+        <div class="todoWrapper col-12 col-lg-6 d-flex flex-column align-items-center">
             <h1>My ToDo´s</h1>
-		    <div class="mb-3">
+            <h5>Click on your task to mark it as done</h5>
+            <form action="" @submit.prevent="createNewTodo" class="col-12">
+                <input required
+                    type="text" 
+                    class="form-control" 
+                    v-model="newTodoTitle"
+                    placeholder="Add your task" 
+		        />
 
-                <form action="" @submit.prevent="createNewTodo" class="col-12">
-                    <input 
-                        type="text" 
-                        class="form-control" 
-                        v-model="newTodoTitle"
-                        placeholder="Add your task" 
-			        />
+                <button class="btn btn-sm my-3" type="submit"
+                    >Add task to list</button>
+            </form>
 
-                    <div class="my-3">
-                        <button class="btn btn-primary btn-lg" type="submit"
-                        >Add task to list</button>
-                    </div>
-                </form>
-	        </div>
-
-		    <ul class="todolist">
+		    <ul class="todolist align-self-start m-0 p-0 col-12">
 			    <li 
 				    v-for="todo in todos" 
                     @click="toggleTodo(todo)"

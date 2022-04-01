@@ -10,7 +10,7 @@ const app = Vue.createApp({
             newTodoTitle: "",
 
             todos: [
-                { title: "", completed: false },
+                
             ],
         }
     },
